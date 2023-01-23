@@ -1,7 +1,21 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import java.util.Scanner
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main(args: Array<String>) {
+    while (true) {
+        print("Введите Число: ")
+        val reader = Scanner(System.`in`)
+        val number = reader.nextInt()
+        if (number % 3 == 0 && number % 5 == 0) {
+            println("Fizz Buzz")
+        } else if (number % 3 == 0) {
+            println("Fizz")
+        } else if (number % 5 == 0) {
+            println("Buzz")
+        } else {
+            println(number)
+        }
+    }
 }
+
+
+
